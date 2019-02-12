@@ -5,19 +5,25 @@
 
 const bills = [100,50,20,10,5,1];
 
-function budgetToBills(cost) {
+
+
+//same function but user can input what kind of bills to use
+function budgetToBills(cost,usersBills) {
 
   let returnBills = {};
 
-  bills.forEach( (denomination) => {
+  if (!usersBills)
+    usersBills = bills;
 
-      let count;
-      console.log(denomination);
-      if (count = parseInt(cost/denomination))
-      {
-        returnBills[denomination] = count;
-        cost %= denomination;
-      }
+  usersBills.forEach( (denomination) => {
+
+    let count;
+    //console.log(denomination);
+    if (count = parseInt(cost/denomination)) // evaluates false if 0
+    {
+      returnBills[denomination] = count;
+      cost %= denomination;
+    }
 
   });
 
@@ -25,7 +31,17 @@ function budgetToBills(cost) {
 
 }
 
-/*
+//testing
+console.log(budgetToBills(1745));
+console.log(budgetToBills(1744));
+console.log(budgetToBills(1754));
+console.log(budgetToBills(10));
+
+console.log(budgetToBills(1745,[50,20,10,5,1]));
+console.log(budgetToBills(1754,[100,10,1]));
+
+
+/* first draft implementation
 function budgetToBills(cost) {
 
     let returnBills = {};
@@ -70,7 +86,23 @@ function budgetToBills(cost) {
     return returnBills;
 }*/
 
-console.log(budgetToBills(1745));
-console.log(budgetToBills(1744));
-console.log(budgetToBills(1754));
-console.log(budgetToBills(10));
+//second draft implementation
+/*function budgetToBills(cost) {
+
+  let returnBills = {};
+
+  bills.forEach( (denomination) => {
+
+      let count;
+      //console.log(denomination);
+      if (count = parseInt(cost/denomination)) // evaluates false if 0
+      {
+        returnBills[denomination] = count;
+        cost %= denomination;
+      }
+
+  });
+
+  return returnBills;
+
+}*/
