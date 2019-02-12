@@ -23,12 +23,8 @@ function getOverlap(array1,array2) {
             index1++;
             index2++;
         }
-        
-        else {
-            
+        else
             (array1[index1] < array2[index2]) ? index1++ : index2++;
-            
-        }
         
         console.log(overlapArray);
         
