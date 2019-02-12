@@ -1,14 +1,20 @@
-//Problem 7
-//bills are 100, 50, 20, 10, 5, 1
-//I did look up 'cast double to int' since I forgot how js deals with typing, found parseInt
-//much less code than draft 1
+/*
+Problem 7
+  bills are 100, 50, 20, 10, 5, 1
+  I did look up 'cast double to int' since I forgot how js deals with typing, found parseInt
+  much less code than draft 1
+  if user enters decimal/double, parseInt and % truncates
+  needs error checking for user input array of bills
+*/
 
 const bills = [100,50,20,10,5,1];
 
-
-
 //same function but user can input what kind of bills to use
 function budgetToBills(cost,usersBills) {
+
+  //error checking
+  if (!validBills(usersBills))
+    throw console.error("Invalid bills array");
 
   let returnBills = {};
 
@@ -28,6 +34,13 @@ function budgetToBills(cost,usersBills) {
   });
 
   return returnBills;
+
+}
+
+//NEEDS TO BE IMPLEMENTED
+function validBills(arr) {
+
+  return true;
 
 }
 
