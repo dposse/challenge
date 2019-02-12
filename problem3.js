@@ -5,6 +5,6 @@ const bands2 = ['Kiss', 'Aerosmith', 'ACDC', 'Led Zeppelin', 'Nickelback'];
 
 bands.forEach( (band) => {
 
-  (band == 'Nickelback') ? alert("I DON'T love Nickelback!") : alert("I love " + band);
+  (band == 'Nickelback') ? alert("I DON'T love " + band + "!") : alert("I love " + band);
 
 });
