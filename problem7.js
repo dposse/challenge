@@ -12,8 +12,6 @@ const bills = [100,50,20,10,5,1];
 //same function but user can input what kind of bills to use
 function budgetToBills(cost,usersBills) {
 
-
-
   let returnBills = {};
 
   if (!usersBills)
