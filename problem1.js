@@ -5,4 +5,6 @@ function durhamIsAwesome() {
 
 } //end function
 
+//"main"
+alert("Problem 1");
 durhamIsAwesome();

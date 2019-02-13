@@ -8,6 +8,8 @@ for (var band in bands) {
   alert("I love " + bands[band]);
 }*/
 
+alert("Problem 2");
+
 bands.forEach( (band) => {
   alert("I love " + band);
 });

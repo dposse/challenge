@@ -6,7 +6,7 @@ Problem 7
   if user enters decimal/double, parseInt and % truncates
   needs error checking for user input array of bills
 */
-
+console.log("\n\nProblem 7 output\n\n");
 const bills = [100,50,20,10,5,1];
 
 //same function but user can input what kind of bills to use
@@ -68,7 +68,7 @@ function validBills(arr) {
 }
 
 //testing
-alert("Results in console -->");
+alert("Problem 7, Results in console -->");
 
 console.log(budgetToBills(1745));
 console.log(budgetToBills(1744));

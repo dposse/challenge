@@ -1,5 +1,5 @@
 //Problem 4
-
+console.log("Problem 4 output\n\n");
 //given
 const array = [34, 203, 16, 46, 34, 432, 342, 124, 33, 188, 12];
 
@@ -9,12 +9,13 @@ const array = [34, 203, 16, 46, 34, 432, 342, 124, 33, 188, 12];
 let total = 0;
 
 array.forEach( (int) => {
-    
+
     total += int;
     console.log(int, total);
-    
+
 });
 
 console.log(total);
 
+alert("Problem 4");
 alert("Average is " + (total / array.length));
