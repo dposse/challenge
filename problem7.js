@@ -12,14 +12,17 @@ const bills = [100,50,20,10,5,1];
 //same function but user can input what kind of bills to use
 function budgetToBills(cost,usersBills) {
 
-  //error checking
-  if (!validBills(usersBills))
-    throw console.error("Invalid bills array");
+
 
   let returnBills = {};
 
   if (!usersBills)
     usersBills = bills;
+  else {
+    //error checking
+    if (!validBills(usersBills))
+      throw console.error("Invalid bills array");
+  }
 
   usersBills.forEach( (denomination) => {
 
@@ -37,19 +40,42 @@ function budgetToBills(cost,usersBills) {
 
 }
 
-//NEEDS TO BE IMPLEMENTED
+//O(n^2)...
 function validBills(arr) {
 
-  return true;
+  /*don't need to do this since function only called if we know user gave array
+  //if !arr, no argument given
+  if (!arr)
+    return true;*/
+
+  let valid;
+
+  for (let i=0; i<arr.length; i++) {
+
+    valid = false;
+
+      for (let j=0; j<bills.length; j++) {
+
+          if (arr[i] == bills[j])
+            valid = true;
+
+      } //end for
+
+  }
+
+  return valid;
 
 }
 
 //testing
+alert("Results in console -->");
+
 console.log(budgetToBills(1745));
 console.log(budgetToBills(1744));
 console.log(budgetToBills(1754));
 console.log(budgetToBills(10));
 
+console.log("\nNext test runs have bill arrays as arguments");
 console.log(budgetToBills(1745,[50,20,10,5,1]));
 console.log(budgetToBills(1754,[100,10,1]));
 
